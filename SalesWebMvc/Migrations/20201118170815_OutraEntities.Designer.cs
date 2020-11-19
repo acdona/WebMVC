@@ -62,7 +62,7 @@ namespace SalesWebMvc.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<int?>("DepartmenId");
+                    b.Property<int?>("DepartmentId");
 
                     b.Property<string>("Email");
 
@@ -70,7 +70,7 @@ namespace SalesWebMvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmenId");
+                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Seller");
                 });
@@ -84,9 +84,9 @@ namespace SalesWebMvc.Migrations
 
             modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
                 {
-                    b.HasOne("SalesWebMvc.Models.Department", "Departmen")
+                    b.HasOne("SalesWebMvc.Models.Department", "Department")
                         .WithMany("Sellers")
-                        .HasForeignKey("DepartmenId");
+                        .HasForeignKey("DepartmentId");
                 });
 #pragma warning restore 612, 618
         }

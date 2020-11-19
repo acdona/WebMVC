@@ -7,15 +7,15 @@ namespace SalesWebMvc.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Seller_Department_DepartmenId",
+                name: "FK_Seller_Department_DepartmentId",
                 table: "Seller");
 
             migrationBuilder.DropIndex(
-                name: "IX_Seller_DepartmenId",
+                name: "IX_Seller_DepartmentId",
                 table: "Seller");
 
             migrationBuilder.DropColumn(
-                name: "DepartmenId",
+                name: "DepartmentId",
                 table: "Seller");
 
             migrationBuilder.RenameColumn(
@@ -63,19 +63,19 @@ namespace SalesWebMvc.Migrations
                 newName: "Date");
 
             migrationBuilder.AddColumn<int>(
-                name: "DepartmenId",
+                name: "DepartmentId",
                 table: "Seller",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Seller_DepartmenId",
+                name: "IX_Seller_DepartmentId",
                 table: "Seller",
-                column: "DepartmenId");
+                column: "DepartmentId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Seller_Department_DepartmenId",
+                name: "FK_Seller_Department_DepartmentId",
                 table: "Seller",
-                column: "DepartmenId",
+                column: "DepartmentId",
                 principalTable: "Department",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
