@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <StartupObject></StartupObject>
+    <ApplicationIcon>022.ICO</ApplicationIcon>
+    <UserSecretsId>1d376fe8-54fb-4966-a11d-2b4b8293b2f8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
